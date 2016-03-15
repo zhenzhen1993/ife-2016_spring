@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>任务一</title>
+<title>任务二</title>
 <style>
 *{
 	margin:0;
@@ -61,12 +61,69 @@ header a{
 	line-height:2em;}
 .last table{
 	width:100%;
-	text-align:left;
-	border:1px solid #ccc;}
+	text-align:left;}
+.last td{
+	border:1px solid #ccc;
+	}
 .last table th{
 	background-color:#000;
 	color:#fff;
 	margin-left:5px;}
+.last .bottom{
+	background-color:#ccc;
+	font-weight:bolder;
+	}
+.form-1{
+	text-align:center;
+	}
+.form-1 .head{
+	height:40px;
+	text-align:left;
+	line-height:40px;
+	font-size:0.7em;
+	padding-left:10px;
+	border-left:5px solid #ccc;}
+.form-1 p{
+	color:#ccc;
+	font-size:0.8em;
+	width:300px;
+	text-align:left;
+	margin-left:50%;
+	margin-top:5px;}
+.form-1 span{
+	display:inline-block;
+	width:150px;
+	text-align:right;
+	padding-right:20px;
+	margin-top:20px;
+	}
+.form-1 .de{
+	display:inline-block;
+	width:173px;
+	text-align:left;}
+.form-1 .self{
+	position:relative;
+	bottom:60px;
+	}
+.form-1 textarea{
+	margin-top:20px;}
+.form-1 .botton{
+	display:block;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	color:#fff;
+	background:#09F;
+	font-weight:900;
+	text-decoration:none;
+	border-radius:10px;}
+footer{
+	height:80px;
+	background-color:#000;
+	color:#fff;
+	font-size:12px;
+	text-align:center;
+	line-height:80px;}
 </style>
 </head>
 
@@ -133,7 +190,7 @@ header a{
             <li>排名2</li>
             <li>排名3</li>
         </ol>
-        <table>
+        <table cellpadding="0" cellspacing="0">
             <tr>
                 <th>表头</th>
                 <th>表头</th>
@@ -159,36 +216,47 @@ header a{
                 <td>内容内容内容内容</td>
                 <td><a href="#">操作</a></td>
             </tr>
-            <tr>
+            <tr class="bottom">
                 <td>总计：</td>
                 <td colspan="2">1000</td>
             </tr>
         </table>
     </div>
-    <div class="contant-1">
-        <h2>这以后是个侧边栏</h2>
-        <h2>侧栏注册窗口</h2>
+    <div class="contant-1 form-1">
+    	<div class="head">
+            <h2>这以后是个侧边栏，侧栏注册窗口</h2>
+        </div>
         <form> 
-             请输入邮箱地址：<input type="text" value="这是一个文本输入框"/>
+             <span>请输入邮箱地址</span> <input type="text" value="这是一个文本输入框"/>
              <p>邮箱输入地址按要求格式输入</p>
-             请输入密码：<input type="text" value="这是一个文本输入框" />
-             请重复输入密码：<input type="text" value="这是一个文本输入框" />
-             密码为6-16位英文数字
+             <span>请输入密码</span><input type="password" value="123456" /><br  />
+             <span>请重复输入密码</span><input type="password" value="123456" /><br  />
+             <p>密码为6-16位英文数字</p>
              <br />
-             性别：<input type="radio" name="sex" value="0" checked="checked" />男
-             <input type="radio" name="sex" value="1" />女
-             城市：<select>
+             <span>性别</span><div class="de"><input type="radio" name="sex" value="0" checked="checked" />男
+             <input type="radio" name="sex" value="1" />女</div><br  />
+             <span>城市</span>
+             <div class="de">
+                <select>
                 <option value ="bj">北京</option>
                 <option value ="sh">上海</option>
                 <option value="gz">广州</option>
                 <option value="zh">杭州</option>
-             </select>
-             爱好：<input type="checkbox" name="hobby" value="1" />运动
-             <input type="checkbox" name="hobby" value="2" />艺术
-             <input type="checkbox" name="hobby" value="3" />科学
-             个人描述：<textarea>这是一个多行文本框，输入你的个人描述</textarea>
-             <input type="submit" value="确认提交" />
+                </select>
+             </div><br  />
+             <span>爱好</span>
+             <div class="de">
+                 <input type="checkbox" name="hobby" value="1" />运动
+                 <input type="checkbox" name="hobby" value="2" />艺术
+                 <input type="checkbox" name="hobby" value="3" />科学
+             </div><br  />
+             <span class="self">个人描述</span>
+             <div class="de">
+             	<textarea rows="5" cols="50">这是一个多行文本框，输入你的个人描述</textarea>
+             </div><br  />
+             <a class="botton" href="#">确认提交</a>
          </form>
+        
      </div>
      <footer>版权所有&copy;</footer>
 </body>
